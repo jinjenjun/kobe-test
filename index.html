@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kobe 曼巴精神</title>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">	
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.css"
+    integrity="sha512-GQSxWe9Cj4o4EduO7zO9HjULmD4olIjiQqZ7VJuwBxZlkWaUFGCxRkn39jYnD2xZBtEilm0m4WBG7YEmQuMs5Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/jquery-3.6.0.min.js"></script>
+  </head>
+  
+  <body>
+    
+    <!-- Kobe三連冠數據區 -->
+    <section class="container-fluid winTitleAllOutside">
+      <div class="row">
+
+        <div class="col-md-12 winTitleOutside">          
+          <div class="winTitleInside">
+            <h1 class="winTitleSyle">湖人三連冠時代 KOBE巔峰數據</h1>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="container-fluid"  style="background-color: #360040">
+      <div class="row">
+        <div class="col-md-6 portraitOutside">
+            <ul class="portraitStyle" id="board"></ul>
+        </div>
+
+        <div class="col-md-6 barChartOutside">         
+          <div class="barChart"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 曼巴精神區 -->
+    <section class="container-fluid mambaAllOutside">
+      <div class="row">
+        
+        <div class="col-md-1 mambaContentOutside">
+        </div>
+
+        <div class="col-md-5 mambaContentOutside">
+          <div class="mambaContentInside">
+            <h1 class="mambaContentTitle">永不言敗的曼巴精神</h1>
+            <p class="mambaContentText">
+              黑曼巴是非洲撒哈拉以南的一種大型毒蛇，是當地體型最長的毒蛇，不但具備良好的視力，更是世界上移動速度最快的蛇類，這是Kobe自喻的動物，甚至將黑曼巴設計為自身球鞋的logo(如圖)，只因為它與球場上的自己相似，義無反顧朝著目標前進。
+            </p>
+            <span class="mambaContentNote">註：游標在logo上滑動，logo會不斷變換顏色</span>
+          </div>
+        </div>
+
+        <div class="col-md-5 mambaLogoOutside">          
+          <canvas id="mycanvas" style="width: 100%"></canvas>   
+        </div>
+
+        <div class="col-md-1 mambaContentOutside">
+        </div>   
+        
+      </div>
+    </section>
+
+    <!-- 24背號數字區 -->
+    <section class="container-fluid numCardAllOutside">
+      <div class="row">
+
+        <div class="col-md-12 numCardOutside">
+
+          <div class="timer">
+            <div class="pill">
+              <div id="year" class="dateTypeStyle"></div>
+              <div class="label">Year</div>
+            </div>
+            <div class="pill">
+              <div id="month" class="dateTypeStyle"></div>
+              <div class="label">Month</div>
+            </div>
+            <div class="pill">
+              <div id="day" class="dateTypeStyle"></div>
+              <div class="label">Day</div>
+            </div>
+            <div class="pill">
+              <div id="hours" class="dateTypeStyle"></div>
+              <div class="label">Hours</div>
+            </div>
+            <div class="pill">
+              <div id="minutes" class="dateTypeStyle"></div>
+              <div class="label">Minutes</div>
+            </div>
+            <div class="pill">
+              <div id="seconds" class="dateTypeStyle"></div>
+              <div class="label">Seconds</div>
+            </div>
+            <div class="pill">
+              <div id="milliseconds" class="dateTypeStyle"></div>
+              <div class="label">Milliseconds</div>
+            </div>
+          </div>
+ 
+        </div>
+            
+      </div>
+    </section>
+
+    <section class="container-fluid numTitleAllOutside">
+      <div class="row">
+        <div class="col-md-12 numTitleOutside">          
+          <div class="numTitleInside">
+            <h1 class="numTitleSyle">全天戰鬥24小時的24號</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 numTitleOutside">          
+        </div>
+        <div class="col-md-8 numTitleOutside">          
+          <p class="numContentStyle">
+            在2006年，Kobe將背號換成24號，他自己的說法是：「這是一天的長度、也是一次進攻的時間，我承諾要支配每一個24小時、每一個24秒。」，但單單用加減數去看，他也有想超越23號(Michael Jordan)的想法，他一直以Jordan為假想敵，而改穿24號前的最後一個賽季，他做到了一件事，讓人想像有超越Jordan的可能性：單場砍下81分。<br><span class="numContentNote">註：游標移到數字卡上，數字卡會進行跳動</span>
+          </p>
+        </div>
+        <div class="col-md-2 numTitleOutside">          
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.2/dat.gui.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
+    integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.0.0/d3.min.js"
+      integrity="sha512-55FY9DHtfMBE2epZhXrWn78so/ZT5/GCLim66+L83U5LghiYwVBAEris4/13Iab9S8C9ShJp3LQL/2raiaO+0w=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.js"
+      integrity="sha512-11Z4MD9csmC3vH8Vd0eIPJBQu3uEHEqeznWEt3sLBCdQx3zm9mJbBcJH8WTcyGY9EXDE81BNpjE2vLosPK8cFQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="JS/all.js"></script>
+
+  </body>
+
+</html>
+  
