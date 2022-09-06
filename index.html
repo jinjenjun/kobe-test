@@ -22,6 +22,8 @@
 
     <link rel="stylesheet" href="CSS/style.css">
 
+    <!-- matomo -->
+
     <!-- <script>
       var _paq = window._paq = window._paq || [];
       /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
@@ -49,6 +51,27 @@
         g.async=true; g.src='//cdn.matomo.cloud/jinjenjun.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
       })();
     </script>
+
+    <!-- fingerprint -->
+    
+    <script>
+      // Initialize the agent at application startup.
+      const fpPromise = import('https://fpcdn.io/v3/rMvx3oUujMKbAQ1NAHPJ')
+        .then(FingerprintJS => FingerprintJS.load())
+
+      // Get the visitor identifier when you need it.
+      fpPromise
+        .then(fp => fp.get())
+        .then(result => {
+          // This is the visitor identifier:
+          const visitorId = result.visitorId
+          console.log(visitorId)
+        })
+    </script>
+
+
+
+
 
     <script src="JS/jquery-3.6.0.min.js"></script>
 
